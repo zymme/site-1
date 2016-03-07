@@ -22,6 +22,16 @@ homeProjectApp.controller('ContactController', function ContactController($scope
 
         console.log('User entered for pol num = ' + $scope.contact.policy_number);
 
+        var config = {headers: {
+            "X-TestingPol" : $scope.contact.policy_number,
+            "Access-Control-Allow-Origin": true
+        }}
+
+        $http.get('http://localhost:8088/#/view', config)
+            .then(function(response) {
+                console.log(response);
+            });
+
 
     }
 
