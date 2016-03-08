@@ -13,14 +13,12 @@ homeProjectApp.controller('ContactController', function ContactController($scope
         email: 'canuckzed@gmail.com',
         created: '2016-02-29',
         policy_number: '3232325',
-        session_id: '99999999'
+        session_id: 'alsdjkds23929293lsk2-9292'
     }
 
     var self = this;
-    var url = 'http://localhost:8811/token/' + $scope.contact.policy_number + '/' + $scope.contact.session_id;
+    var url = 'http://localhost:8811/tokenv2/' + $scope.contact.policy_number + '/' + $scope.contact.session_id;
     console.log('tokenurl = ' + url);
-
-    //$http.get('http://localhost:8811/token/' + )
 
     $http.get(url)
         .then(function(response) {
