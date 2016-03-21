@@ -2,29 +2,54 @@
     <h3>Test Header</h3>
     <!--<pre>{{ contact | json }}</pre>-->
 
-    <fieldset>
-        <label for="fname">First Name</label>
-        <input id="fname" name="fname" ng-model="contact.first_name">
-        <label for="lname">Last Name</label>
-        <input id="lname" name="lname" ng-model="contact.last_name">
-    </fieldset>
-    <fieldset>
-        <label for="policy_number">Policy Number</label>
-        <input id="policy_number" name="policy_number" ng-model="contact.policy_number" disabled>
-        <label for="sess_id">Session Id</label>
-        <input id="sess_id" name="sess_id" ng-model="contact.session_id" disabled>
-    </fieldset>
+    <!--<fieldset>-->
+        <!--<label for="fname">First Name</label>-->
+        <!--<input id="fname" name="fname" ng-model="contact.first_name">-->
+        <!--<label for="lname">Last Name</label>-->
+        <!--<input id="lname" name="lname" ng-model="contact.last_name">-->
+    <!--</fieldset>-->
+    <!--<fieldset>-->
+        <!--<label for="policy_number">Policy Number</label>-->
+        <!--<input id="policy_number" name="policy_number" ng-model="contact.policy_number" disabled>-->
+        <!--<label for="sess_id">Session Id</label>-->
+        <!--<input id="sess_id" name="sess_id" ng-model="contact.session_id" disabled>-->
+    <!--</fieldset>-->
 
-    <fieldset>
-        <div id="showpolicy">
-            {{contact.policy_number}}
-        </div>
+    <!--<fieldset>-->
+        <!--<div id="showpolicy">-->
+            <!--{{contact.policy_number}}-->
+        <!--</div>-->
         <!--<a href="http://localhost:8088/#/view/{{contact.policy_number}}/{{contact.session_id}}" class="btn btn-lg btn-success" role="button" ng-click="sendIt()">Send it!</a>-->
         <!--<a href="http://localhost:8088/#/view?param1={{contact.policy_number}}&param2={{contact.session_id}}" class="btn btn-lg btn-success" role="button">Send it!</a>-->
-        <a href="http://localhost:8088/#/view?param1={{contact.token}}" class="btn btn-lg btn-success" role="button">Send it!</a>
+        <!--<a href="http://localhost:8088/#/view?param1={{contact.token}}" class="btn btn-lg btn-success" role="button">Send it!</a>-->
 
 
+    <!--</fieldset>-->
+
+
+
+    <fieldset>
+        <button class="btn btn-primary" ng-click="currentUser()">Get Current User</button>
+        <div id="curr_user_display" ng-show="contact.current_policy_num">
+            <h2>I have policy data from auth!</h2>
+            <fieldset>
+                <label for="pol_num">Policy Number</label>:
+                <span id="pol_num"  name="pol_num">{{contact.current_policy_num}}</span>
+            </fieldset>
+            <fieldset>
+                <label for="pol_email">Email</label>:
+                <span id="pol_email" name="pol_email">{{contact.email}}</span>
+            </fieldset>
+            <fieldset>
+                <label for="pol_curr_name">Current Policy Name</label>:
+                <span id="pol_curr_name" name="pol_curr_name">{{contact.current_policy_name}}</span>
+            </fieldset>
+
+        </div>
     </fieldset>
+
+
+
 
 
 
