@@ -21,6 +21,11 @@ var homeProjectApp = angular.module('homeProjectApp', ['ngResource', 'ngRoute'])
             controllerAs: 'contactCtrl'
         });
 
+        $routeProvider.when('/testnav', {
+            templateUrl: 'templates/testnav.html',
+            controller: 'TestnavController'
+        });
+
         $routeProvider.otherwise( {
 
             redirectTo: '/home'
@@ -29,3 +34,4 @@ var homeProjectApp = angular.module('homeProjectApp', ['ngResource', 'ngRoute'])
 
 
     });
+    //.directive('datePicker', DatePicker);

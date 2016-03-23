@@ -1,85 +1,58 @@
-/* app css stylesheet */
-.hoverwell:hover {
-  background-color: #52575c;
-  cursor: pointer;
-}
-select, textarea {
-  color: #52575c;
-}
+.row {
+    max-width: 100%; }
 
-.well-title {
-  margin-top: 0px;
-}
-.session {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.votingWidget {
-  height: 64px;
-  padding: 7px;
-}
-
-.votingButton {
-  padding-left:6px;
-  cursor:pointer;
-}
-
-.sessionThumbnail {
-    height:100%;
-    overflow: hidden;
-}
-
-
-.calendar{
-    border: 1px solid #555;
-    width: 238px;
-}
-.calendar .row {
-    margin-left: 0px;
-}
-.calendar .row div{
-    float:left;
-    padding:2px;
-    width:30px;
-    text-align:center;
-}
-.calendar-nav-left {
-    float:left;
-    width: 20px;
-    padding:2px;
-}
-.calendar-nav-right {
-    float:left;
-    width: 20px;
-    padding:2px;
-    text-align:right;
-}
-
-.calendar .row .calendar-hdr {
-    padding:2px;
-    float:left;
-    width: 166px;
-    text-align:center;
-}
-.pointer {
-    cursor: pointer;
-}
-.date-picker {
+.menu {
+    background-color: #292c2f;
+    padding: 1.5rem 3rem;
+    height: auto; }
+.menu .inline-list {
+    text-align: center; }
+.menu .inline-list li {
+    float: none;
+    display: inline-block; }
+.menu .inline-list a {
+    color: #fff;
+    padding-bottom: 0.5rem; }
+.menu .inline-list a:hover {
+    color: #87d37c;
+    transition: all .3s ease-in-out; }
+.menu .inline-list .active a {
+    color: #87d37c; }
+.menu .account {
     position: absolute;
-    top: -7px;
-    left: 209px;
-    background-color: #272b30;
-}
+    top: 3%;
+    right: 3%; }
+.menu .account a, .menu .account i {
+    color: #fff; }
+@media only screen and (min-width: 40.063em) {
+    .menu {
+        height: 5rem; }
+    .menu .inline-list {
+        float: left;
+        margin: 0 0 0 1.5rem; }
+    .menu a:hover {
+        border-bottom: 2px solid #87d37c; } }
+.menu .account-action {
+    float: right;
+    margin: -.75rem 0 0 0; }
+.menu .account-action li {
+    margin-left: .2rem; }
+.menu .account-action a {
+    padding: 0.75rem 1rem; }
+.menu .account-action a.signup {
+    font-weight: bold;
+    background-color: #3d4146;
+    border-radius: 3px; }
 
-.projectitem {
-    list-style: none;
-}
-
-div .completeditem {
-    background-color: lightsalmon;
-}
+.name {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin: 0 0 1rem 0;
+    color: #fff; }
+.name i {
+    color: #87d37c;
+    margin-right: 0.5rem; }
+@media only screen and (min-width: 40.063em) {
+    .name {
+        float: left; } }
